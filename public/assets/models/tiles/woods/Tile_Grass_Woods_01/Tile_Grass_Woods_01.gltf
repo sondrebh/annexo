@@ -217,6 +217,10 @@
     {
       "uri": "palette1.png",
       "name": "palette1"
+    },
+    {
+      "uri": "palette3.png",
+      "name": "palette3"
     }
   ],
   "materials": [
@@ -228,6 +232,15 @@
         "metallicFactor": 0.0
       },
       "name": "palette1"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "palette3"
     }
   ],
   "meshes": [
@@ -256,7 +269,7 @@
             "TEXCOORD_0": 8
           },
           "indices": 9,
-          "material": 0
+          "material": 1
         }
       ],
       "name": "decorator_natural_pineForest"
@@ -312,6 +325,11 @@
       "sampler": 0,
       "source": 0,
       "name": "palette1"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "palette3"
     }
   ]
 }

@@ -5,13 +5,13 @@ import * as THREE from 'three';
 import scene from '../scene/scene';
 
 // Setup
-const ambientLight = new THREE.AmbientLight( 0xffffff, 0.5 );
+const ambientLight = new THREE.AmbientLight( 0xFEFEFE, 0.6 );
 scene.add( ambientLight );
 
-const light = new THREE.DirectionalLight( 0xffffff, 0.7);
+const light = new THREE.DirectionalLight( 0xFEFEFE, 0.6 );
 
-light.position.set( 25, 100, 25 );
-light.target.position.set( 75, 0, 75 );
+light.position.set( 15, 100, 15 );
+light.target.position.set( 0, 0, 0 );
 
 light.castShadow = true;
 

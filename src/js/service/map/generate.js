@@ -9,7 +9,9 @@ import { tiles, loadTiles } from './tiles/tiles';
 // Setup
 const generate = (sizeX, sizeY) => {
     const simplex = new SimplexNoise(Math.random);
-    const scale = 35;
+    const scale = 28;
+
+    const mapTiles = [];
 
     loadTiles().then(() => {
         for(let i = 0; i < sizeY; i++) {
@@ -18,23 +20,45 @@ const generate = (sizeX, sizeY) => {
                 
                 let tile;
 
-                if(value2d < -0.7) {
+                if(value2d < -0.5) { // Sea
                     tile = tiles.water.Tile_Water_01_Sea;
-                } else if (value2d < -0.5 ) {
+                } else if (value2d < -0.1 ) { // Sea outer
                     tile = tiles.water.Tile_Water_01_Coast_Outer;
-                } else if (value2d < -0.4) {
+                } else if (value2d < 0.1) { // Sea coast
                     tile = tiles.water.Tile_Water_01_Coast;
-                } else if (value2d < -0.1) {
-                    tile = tiles.grass.Tile_Grass_01_Coast;
-                } else if (value2d < 0.3) {
-                    tile = tiles.grass.Tile_Grass_01_Land;
-                } else if (value2d < 0.7) {
-                    tile = tiles.grass.Tile_Grass_01_Inland;
-                } else if (value2d < 1) {
-                    tile = tiles.woods.Tile_Grass_Woods_02_Normal;
+                } else if (value2d < 0.2) { // Grass coast
+                    const value2d_1 = simplex.noise2D(j, i);
+                    if(value2d_1 < 0.5) {
+                        tile = tiles.grass.Tile_Grass_01_Coast
+                    } else if(value2d_1 < 1) {
+                        tile = tiles.grass.Tile_Grass_01_Land
+                    }
+                } else if (value2d < 0.3) { // Grass land
+                    const value2d_1 = simplex.noise2D(j, i);
+                    if(value2d_1 < 0.5) {
+                        tile = tiles.grass.Tile_Grass_01_Land
+                    } else if(value2d_1 < 1) {
+                        tile = tiles.grass.Tile_Grass_01_Inland
+                    }
+                } else if (value2d < 0.8) { // Grass inland
+                    const value2d_1 = simplex.noise2D(j, i);
+                    if(value2d_1 < 0.5) {
+                        tile = tiles.grass.Tile_Grass_01_Inland
+                    } else if(value2d_1 < 1) {
+                        tile = tiles.grass.Tile_Grass_01_Land
+                    }
+                } else if (value2d < 1) { // Woods
+                    const value2d_1 = simplex.noise2D(j, i);
+                    if(value2d_1 < -0.6) {
+                        tile = tiles.woods.Tile_Grass_Woods_02_Normal
+                    } else if(value2d_1 < 0.3) {
+                        tile = tiles.woods.Tile_Grass_Woods_02_Fruit
+                    } else if(value2d_1 < 1) {
+                        tile = tiles.woods.Tile_Grass_Woods_01
+                    }
                 }
 
-                spawnTile(tile, newTile => {
+                addTile(tile, newTile => {
                     const tileOffsetWidth = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).width;
                     const tileOffsetHeight = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).height;
 
@@ -45,27 +69,41 @@ const generate = (sizeX, sizeY) => {
                     }
         
                     newTile.position.z = (i / tileOffsetHeight) / 1.333;
+
+                    mapTiles.push(newTile);
                 });
+
+                if(j === sizeX - 1) {
+                    spawnTiles(mapTiles);
+                }
             }
         }
     });
 }
 
-const spawnTile = (tile, callback) => {
-    const newTile = tile.scene.clone();
+const chooseOne = arr => {
+    return arr[Math.floor(Math.random() * arr.length)];
+};
 
-    newTile.traverse( function( node ) {
-        if(node.isMesh) { 
-            node.castShadow = true; 
-            node.receiveShadow = true;
-        }
-    });
+const spawnTiles = tiles => {
+    for(const tile of tiles) {
+        tile.traverse( function( node ) {
+            if(node.isMesh) { 
+                node.castShadow = true; 
+                node.receiveShadow = true;
+            }
+        });
+
+        scene.add(tile);
+    };
+};
+
+const addTile = (tile, callback) => {
+    const newTile = tile.scene.clone();
 
     if(callback) {
         callback(newTile);
     }
-
-    scene.add( newTile );
 };
 
 const tileSize = tile => {
