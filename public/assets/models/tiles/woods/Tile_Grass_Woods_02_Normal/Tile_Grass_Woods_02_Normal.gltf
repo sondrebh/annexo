@@ -1,0 +1,335 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC3",
+      "max": [
+        0.86602497100830078,
+        0.0,
+        1.0
+      ],
+      "min": [
+        -0.86602497100830078,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        0.866019070148468
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.866019070148468
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC2",
+      "max": [
+        0.055900000035762787,
+        0.076099991798400879
+      ],
+      "min": [
+        0.055900000035762787,
+        0.076099991798400879
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 60,
+      "type": "SCALAR",
+      "max": [
+        35.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 980,
+      "type": "VEC3",
+      "max": [
+        1.0252150297164917,
+        1.8253710269927979,
+        1.0622190237045288
+      ],
+      "min": [
+        -0.97744399309158325,
+        0.0,
+        -1.102728009223938
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 980,
+      "type": "VEC3",
+      "max": [
+        0.99718683958053589,
+        0.9984014630317688,
+        0.99757343530654907
+      ],
+      "min": [
+        -0.99718683958053589,
+        -0.9984014630317688,
+        -0.99757343530654907
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 980,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 980,
+      "type": "VEC2",
+      "max": [
+        0.12319999933242798,
+        0.41930001974105835
+      ],
+      "min": [
+        0.12110000103712082,
+        0.11180001497268677
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5123,
+      "count": 1020,
+      "type": "SCALAR",
+      "max": [
+        979.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "Tile_Grass_Woods_02_Normal.bin",
+      "byteLength": 50868
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 432,
+      "byteLength": 432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 864,
+      "byteLength": 576
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1440,
+      "byteLength": 288
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1728,
+      "byteLength": 60
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1788,
+      "byteLength": 11760
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13548,
+      "byteLength": 11760
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 25308,
+      "byteLength": 15680
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 40988,
+      "byteLength": 7840
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48828,
+      "byteLength": 2040
+    }
+  ],
+  "images": [
+    {
+      "uri": "palette3.png",
+      "name": "palette3"
+    },
+    {
+      "uri": "palette1.png",
+      "name": "palette1"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "palette3"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "palette1"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "Tile_Grass_Woods_02_Normal"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1
+        }
+      ],
+      "name": "decorator_natural_forest_deciduous"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "mesh": 0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "name": "Tile_Grass_Woods_02_Normal"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "decorator_natural_forest_deciduous"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "Tile_Grass_Woods_02_Normal"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "palette3"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "palette1"
+    }
+  ]
+}
