@@ -6,6 +6,7 @@ import scene from '../parts/scene/scene';
 import renderer from '../parts/renderer/renderer';
 import camera from '../parts/camera/camera';
 import controls from '../parts/controller/controller';
+import light from '../parts/light/light';
 
 // Setup
 const loop = () => {

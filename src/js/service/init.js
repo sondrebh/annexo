@@ -20,7 +20,7 @@ const init = () => {
     var axesHelper = new THREE.AxesHelper( 5 );
     scene.add( axesHelper );
 
-    generate();
+    generate(64, 64);
 };
 
 export default init;
