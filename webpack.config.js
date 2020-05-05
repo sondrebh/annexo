@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/assets/js'),
+    path: path.resolve(__dirname, 'public/assets/js/'),
+    publicPath: '/assets/js/'
   },
   module: {
     rules: [
@@ -20,5 +21,10 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer: {
+    contentBase: './public',
+    watchContentBase: true,
+    port: 3000
   }
 };

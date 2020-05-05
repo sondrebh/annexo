@@ -10,7 +10,7 @@ scene.add( ambientLight );
 
 const light = new THREE.DirectionalLight( 0xffffff, 1 );
 
-light.position.set( 50, 50, 50 );
+light.position.set( 25, 50, 25 );
 light.target.position.set( 0, 0, 0 );
 
 light.castShadow = true;
