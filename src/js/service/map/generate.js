@@ -107,9 +107,14 @@ const chooseOne = arr => {
 const spawnTiles = tiles => {
     for(const tile of tiles) {
         tile.traverse( function( node ) {
+
             if(node.isMesh) { 
                 node.castShadow = true; 
                 node.receiveShadow = true;
+
+                if(node.name === 'decorator_natural_grasslands') {
+                    node.material.shadowSide = THREE.FrontSide;
+                }
 
                 if(node.material.map) {
                     node.material.map.anisotropy = 16;

@@ -79,39 +79,39 @@
     {
       "bufferView": 5,
       "componentType": 5126,
-      "count": 980,
+      "count": 132,
       "type": "VEC3",
       "max": [
-        1.0252150297164917,
-        1.8253710269927979,
-        1.0622190237045288
+        0.797573983669281,
+        0.37056699395179749,
+        0.81354999542236328
       ],
       "min": [
-        -0.97744399309158325,
-        0.0,
-        -1.102728009223938
+        -0.816008985042572,
+        -0.23010900616645813,
+        -0.80220597982406616
       ]
     },
     {
       "bufferView": 6,
       "componentType": 5126,
-      "count": 980,
+      "count": 132,
       "type": "VEC3",
       "max": [
-        0.99718683958053589,
-        0.9984014630317688,
-        0.99757343530654907
+        0.0,
+        0.45388084650039673,
+        0.89106237888336182
       ],
       "min": [
-        -0.99718683958053589,
-        -0.9984014630317688,
-        -0.99757343530654907
+        0.0,
+        0.45388084650039673,
+        0.89106237888336182
       ]
     },
     {
       "bufferView": 7,
       "componentType": 5126,
-      "count": 980,
+      "count": 132,
       "type": "VEC4",
       "max": [
         1.0,
@@ -129,24 +129,24 @@
     {
       "bufferView": 8,
       "componentType": 5126,
-      "count": 980,
+      "count": 132,
       "type": "VEC2",
       "max": [
-        0.12319999933242798,
-        0.41930001974105835
+        0.097699999809265137,
+        0.1500999927520752
       ],
       "min": [
-        0.12110000103712082,
-        0.11180001497268677
+        0.097699999809265137,
+        0.1500999927520752
       ]
     },
     {
       "bufferView": 9,
-      "componentType": 5123,
-      "count": 1020,
+      "componentType": 5121,
+      "count": 198,
       "type": "SCALAR",
       "max": [
-        979.0
+        131.0
       ],
       "min": [
         0.0
@@ -159,7 +159,7 @@
   "buffers": [
     {
       "uri": "Tile_Grass_Woods_02_Normal.bin",
-      "byteLength": 50868
+      "byteLength": 8322
     }
   ],
   "bufferViews": [
@@ -190,34 +190,30 @@
     {
       "buffer": 0,
       "byteOffset": 1788,
-      "byteLength": 11760
+      "byteLength": 1584
     },
     {
       "buffer": 0,
-      "byteOffset": 13548,
-      "byteLength": 11760
+      "byteOffset": 3372,
+      "byteLength": 1584
     },
     {
       "buffer": 0,
-      "byteOffset": 25308,
-      "byteLength": 15680
+      "byteOffset": 4956,
+      "byteLength": 2112
     },
     {
       "buffer": 0,
-      "byteOffset": 40988,
-      "byteLength": 7840
+      "byteOffset": 7068,
+      "byteLength": 1056
     },
     {
       "buffer": 0,
-      "byteOffset": 48828,
-      "byteLength": 2040
+      "byteOffset": 8124,
+      "byteLength": 198
     }
   ],
   "images": [
-    {
-      "uri": "palette3.png",
-      "name": "palette3"
-    },
     {
       "uri": "palette1.png",
       "name": "palette1"
@@ -226,17 +222,24 @@
   "materials": [
     {
       "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.64,
+          0.64,
+          0.64,
+          1.0
+        ],
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.0
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
       },
-      "name": "palette3"
+      "name": "Material.002"
     },
     {
       "pbrMetallicRoughness": {
         "baseColorTexture": {
-          "index": 1
+          "index": 0
         },
         "metallicFactor": 0.0
       },
@@ -272,7 +275,7 @@
           "material": 1
         }
       ],
-      "name": "decorator_natural_forest_deciduous"
+      "name": "decorator_natural_grasslands"
     }
   ],
   "nodes": [
@@ -302,7 +305,7 @@
         0.0,
         -1.0
       ],
-      "name": "decorator_natural_forest_deciduous"
+      "name": "decorator_natural_grasslands"
     }
   ],
   "samplers": [
@@ -324,11 +327,6 @@
     {
       "sampler": 0,
       "source": 0,
-      "name": "palette3"
-    },
-    {
-      "sampler": 0,
-      "source": 1,
       "name": "palette1"
     }
   ]
