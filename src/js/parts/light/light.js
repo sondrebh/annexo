@@ -22,6 +22,6 @@ scene.add( light );
 scene.add( light.target );
 
 const helper = new THREE.CameraHelper( light.shadow.camera );
-scene.add( helper );
+//scene.add( helper );
 
 export default light;

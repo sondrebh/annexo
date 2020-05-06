@@ -79,39 +79,39 @@
     {
       "bufferView": 5,
       "componentType": 5126,
-      "count": 1276,
+      "count": 240,
       "type": "VEC3",
       "max": [
-        0.77131897211074829,
-        1.2103259563446045,
-        0.71150201559066772
+        0.63412398099899292,
+        0.69518798589706421,
+        0.67927801609039307
       ],
       "min": [
-        -0.75758099555969238,
-        0.0,
-        -0.58191698789596558
+        -0.69063502550125122,
+        0.00343300006352365,
+        -0.61643302440643311
       ]
     },
     {
       "bufferView": 6,
       "componentType": 5126,
-      "count": 1276,
+      "count": 240,
       "type": "VEC3",
       "max": [
-        0.979713499546051,
         1.0,
-        0.99982315301895142
+        1.0,
+        1.0
       ],
       "min": [
-        -0.9768528938293457,
         -1.0,
-        -0.98374277353286743
+        -1.0,
+        -1.0
       ]
     },
     {
       "bufferView": 7,
       "componentType": 5126,
-      "count": 1276,
+      "count": 240,
       "type": "VEC4",
       "max": [
         1.0,
@@ -129,24 +129,24 @@
     {
       "bufferView": 8,
       "componentType": 5126,
-      "count": 1276,
+      "count": 240,
       "type": "VEC2",
       "max": [
-        0.375,
-        0.375
+        0.9179999828338623,
+        0.39840000867843628
       ],
       "min": [
-        0.125,
-        0.125
+        0.9179999828338623,
+        0.39840000867843628
       ]
     },
     {
       "bufferView": 9,
-      "componentType": 5123,
-      "count": 1584,
+      "componentType": 5121,
+      "count": 360,
       "type": "SCALAR",
       "max": [
-        1275.0
+        239.0
       ],
       "min": [
         0.0
@@ -159,7 +159,7 @@
   "buffers": [
     {
       "uri": "Tile_Grass_Woods_02_Fruit.bin",
-      "byteLength": 66204
+      "byteLength": 13668
     }
   ],
   "bufferViews": [
@@ -190,27 +190,27 @@
     {
       "buffer": 0,
       "byteOffset": 1788,
-      "byteLength": 15312
+      "byteLength": 2880
     },
     {
       "buffer": 0,
-      "byteOffset": 17100,
-      "byteLength": 15312
+      "byteOffset": 4668,
+      "byteLength": 2880
     },
     {
       "buffer": 0,
-      "byteOffset": 32412,
-      "byteLength": 20416
+      "byteOffset": 7548,
+      "byteLength": 3840
     },
     {
       "buffer": 0,
-      "byteOffset": 52828,
-      "byteLength": 10208
+      "byteOffset": 11388,
+      "byteLength": 1920
     },
     {
       "buffer": 0,
-      "byteOffset": 63036,
-      "byteLength": 3168
+      "byteOffset": 13308,
+      "byteLength": 360
     }
   ],
   "images": [
@@ -272,7 +272,7 @@
           "material": 1
         }
       ],
-      "name": "decorator_natural_orchard"
+      "name": "decorator_building_ruins"
     }
   ],
   "nodes": [
@@ -302,7 +302,7 @@
         0.0,
         -1.0
       ],
-      "name": "decorator_natural_orchard"
+      "name": "decorator_building_ruins"
     }
   ],
   "samplers": [

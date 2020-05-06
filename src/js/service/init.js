@@ -11,16 +11,12 @@ import generate from '../service/map/generate';
 
 // Setup
 const init = () => {
-    camera.position.z = 5;
-    camera.position.y = 5;
-    camera.rotation.x = -1;
-
-    scene.background = new THREE.Color(0xa2a2a2);
+    scene.background = new THREE.Color(0x2B4568);
 
     var axesHelper = new THREE.AxesHelper( 5 );
-    scene.add( axesHelper );
+    //scene.add( axesHelper );
 
-    generate(64, 64);
+    generate(44, 44, 20, Math.random);
 };
 
 export default init;

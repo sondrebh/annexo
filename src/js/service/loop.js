@@ -13,8 +13,8 @@ const loop = () => {
     requestAnimationFrame( loop );
 
     // Perform updates
-    controls.update();
     composer.render();
+    controls.update();
 
     renderer.render( scene, camera );
 };

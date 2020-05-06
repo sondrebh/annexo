@@ -3,14 +3,14 @@ import * as SimplexNoise from 'simplex-noise';
 import * as THREE from 'three';
 
 // Parts
+import { outlinePass } from '../../parts/renderer/renderer';
 import scene from '../../parts/scene/scene';
 import { tiles, loadTiles } from './tiles/tiles';
 import light from '../../parts/light/light';
 
 // Setup
-const generate = (sizeX, sizeY) => {
-    const simplex = new SimplexNoise(Math.random);
-    const scale = 28;
+const generate = (sizeX, sizeY, scale, seed) => {
+    const simplex = new SimplexNoise(seed);
 
     const mapTiles = [];
 
@@ -53,8 +53,10 @@ const generate = (sizeX, sizeY) => {
                         const value2d_2 = simplex.noise2D(j, i);
                         if(value2d_2 < 0.45) {
                             tile = tiles.grass.Tile_Grass_01_Inland
-                        } else if(value2d_2 < 1) {
+                        } else if(value2d_2 < 0.4985) {
                             tile = tiles.woods.Tile_Grass_Woods_02_Normal
+                        } else if(value2d_2 < 1) {
+                            tile = tiles.woods.Tile_Grass_Woods_02_Fruit
                         }
 
                     } else if(value2d_1 < 1) {
@@ -88,8 +90,8 @@ const generate = (sizeX, sizeY) => {
                 if(j === sizeX - 1) {
                     spawnTiles(mapTiles);
 
-                    light.position.x =  j / tileOffsetWidth;
-                    light.position.z =  (i / tileOffsetHeight) / 1.333;
+                    light.position.x =  (j / tileOffsetWidth) + 20;
+                    light.position.z =  ((i / tileOffsetHeight) / 1.333) + 20;
 
                     light.target.position.x =  (j / tileOffsetWidth) / 2;
                     light.target.position.z =  ((i / tileOffsetHeight) / 1.333) / 2;
@@ -109,7 +111,13 @@ const spawnTiles = tiles => {
         tile.traverse( function( node ) {
 
             if(node.isMesh) { 
-                node.castShadow = true; 
+
+                node.castShadow = true;
+
+                if(node.name.includes('Water')) {
+                    node.castShadow = false; 
+                }
+
                 node.receiveShadow = true;
 
                 if(node.name === 'decorator_natural_grasslands') {

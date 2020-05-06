@@ -2,9 +2,9 @@
 import * as THREE from 'three';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass.js';
-import {BloomPass} from 'three/examples/jsm/postprocessing/BloomPass.js';
-import {FilmPass} from 'three/examples/jsm/postprocessing/FilmPass.js';
-import { HueSaturationEffect } from 'three/examples/jsm/postprocessing/AdaptiveToneMappingPass';
+import {OutlinePass} from 'three/examples/jsm/postprocessing/OutlinePass';
+import {ShaderPass} from 'three/examples/jsm/postprocessing/ShaderPass';
+import {FXAAShader} from 'three/examples/jsm/shaders/FXAAShader';
 import scene from '../scene/scene';
 import camera from '../camera/camera';
 
@@ -20,10 +20,10 @@ renderer.toneMappingExposure = 0.4;
 renderer.toneMappingWhitePoint = 0.4;
 
 renderer.outputEncoding = THREE.sRGBEncoding;
-renderer.shadowMap.renderReverseSided = false;
 
 export const composer = new EffectComposer( renderer );
 
-
+var renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
 
 export default renderer;

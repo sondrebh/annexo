@@ -10,6 +10,7 @@
     "dev": "webpack-dev-server"
   },
   "dependencies": {
+    "@windfish-studio/three-map-controls": "^1.1.10",
     "css-loader": "^3.5.3",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
