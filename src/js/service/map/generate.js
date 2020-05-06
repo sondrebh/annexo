@@ -5,6 +5,7 @@ import * as THREE from 'three';
 // Parts
 import scene from '../../parts/scene/scene';
 import { tiles, loadTiles } from './tiles/tiles';
+import light from '../../parts/light/light';
 
 // Setup
 const generate = (sizeX, sizeY) => {
@@ -22,10 +23,13 @@ const generate = (sizeX, sizeY) => {
 
                 if(value2d < -0.5) { // Sea
                     tile = tiles.water.Tile_Water_01_Sea;
+
                 } else if (value2d < -0.1 ) { // Sea outer
                     tile = tiles.water.Tile_Water_01_Coast_Outer;
+
                 } else if (value2d < 0.1) { // Sea coast
                     tile = tiles.water.Tile_Water_01_Coast;
+
                 } else if (value2d < 0.2) { // Grass coast
                     const value2d_1 = simplex.noise2D(j, i);
                     if(value2d_1 < 0.5) {
@@ -33,6 +37,7 @@ const generate = (sizeX, sizeY) => {
                     } else if(value2d_1 < 1) {
                         tile = tiles.grass.Tile_Grass_01_Land
                     }
+
                 } else if (value2d < 0.3) { // Grass land
                     const value2d_1 = simplex.noise2D(j, i);
                     if(value2d_1 < 0.5) {
@@ -40,28 +45,35 @@ const generate = (sizeX, sizeY) => {
                     } else if(value2d_1 < 1) {
                         tile = tiles.grass.Tile_Grass_01_Inland
                     }
-                } else if (value2d < 0.8) { // Grass inland
+
+                } else if (value2d < 0.7) { // Grass inland
                     const value2d_1 = simplex.noise2D(j, i);
                     if(value2d_1 < 0.5) {
-                        tile = tiles.grass.Tile_Grass_01_Inland
+
+                        const value2d_2 = simplex.noise2D(j, i);
+                        if(value2d_2 < 0.45) {
+                            tile = tiles.grass.Tile_Grass_01_Inland
+                        } else if(value2d_2 < 1) {
+                            tile = tiles.woods.Tile_Grass_Woods_02_Normal
+                        }
+
                     } else if(value2d_1 < 1) {
                         tile = tiles.grass.Tile_Grass_01_Land
                     }
+
                 } else if (value2d < 1) { // Woods
                     const value2d_1 = simplex.noise2D(j, i);
-                    if(value2d_1 < -0.6) {
-                        tile = tiles.woods.Tile_Grass_Woods_02_Normal
-                    } else if(value2d_1 < 0.3) {
-                        tile = tiles.woods.Tile_Grass_Woods_02_Fruit
-                    } else if(value2d_1 < 1) {
+                    if(value2d_1 < 0.6) {
                         tile = tiles.woods.Tile_Grass_Woods_01
+                    } else if(value2d_1 < 1) {
+                        tile = tiles.mountain.Tile_Mountain_01
                     }
                 }
 
+                const tileOffsetWidth = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).width;
+                const tileOffsetHeight = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).height;
+                
                 addTile(tile, newTile => {
-                    const tileOffsetWidth = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).width;
-                    const tileOffsetHeight = 1 / tileSize(tiles.grass.Tile_Grass_01_Coast.scene).height;
-
                     if(i % 2 === 0) {
                         newTile.position.x = j / tileOffsetWidth;
                     } else {
@@ -75,6 +87,13 @@ const generate = (sizeX, sizeY) => {
 
                 if(j === sizeX - 1) {
                     spawnTiles(mapTiles);
+
+                    light.position.x =  j / tileOffsetWidth;
+                    light.position.z =  (i / tileOffsetHeight) / 1.333;
+
+                    light.target.position.x =  (j / tileOffsetWidth) / 2;
+                    light.target.position.z =  ((i / tileOffsetHeight) / 1.333) / 2;
+
                 }
             }
         }
@@ -91,6 +110,10 @@ const spawnTiles = tiles => {
             if(node.isMesh) { 
                 node.castShadow = true; 
                 node.receiveShadow = true;
+
+                if(node.material.map) {
+                    node.material.map.anisotropy = 16;
+                }
             }
         });
 

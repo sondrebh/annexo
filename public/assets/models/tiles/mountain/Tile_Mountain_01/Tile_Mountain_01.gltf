@@ -1,0 +1,188 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 96,
+      "type": "VEC3",
+      "max": [
+        0.86602497100830078,
+        1.4248360395431519,
+        1.0
+      ],
+      "min": [
+        -0.86602497100830078,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 96,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        0.51941388845443726,
+        0.866019070148468
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.866019070148468
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 96,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 96,
+      "type": "VEC2",
+      "max": [
+        0.875,
+        0.625
+      ],
+      "min": [
+        0.875,
+        0.375
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 174,
+      "type": "SCALAR",
+      "max": [
+        95.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "Tile_Mountain_01.bin",
+      "byteLength": 4782
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1152
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1152,
+      "byteLength": 1152
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2304,
+      "byteLength": 1536
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3840,
+      "byteLength": 768
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4608,
+      "byteLength": 174
+    }
+  ],
+  "images": [
+    {
+      "uri": "palette1.png",
+      "name": "palette1"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "palette1"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "Tile_Mountain_01"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "name": "Tile_Mountain_01"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "Tile_Mountain_01"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "palette1"
+    }
+  ]
+}

@@ -6,7 +6,8 @@ const tiles = {
     water: {},
     grass: {},
     dirt: {},
-    woods: {}
+    woods: {},
+    mountain: {}
 };
 
 // Load water tiles
@@ -28,6 +29,11 @@ const woodsTiles = [
     'Tile_Grass_Woods_01',
     'Tile_Grass_Woods_02_Fruit',
     'Tile_Grass_Woods_02_Normal'
+];
+
+// Load mountain tiles
+const mountainTiles = [
+    'Tile_Mountain_01'
 ];
 
 const loadTiles = async () => {
@@ -56,7 +62,7 @@ const loadTiles = async () => {
         });
     }
 
-     // Woods
+    // Woods
     for(const tileName of woodsTiles) {
         await load(
             '/assets/models/tiles/woods/' + tileName + '/' + tileName + '.gltf'
@@ -68,6 +74,17 @@ const loadTiles = async () => {
         });
     }
 
+    // Mountains
+    for(const tileName of mountainTiles) {
+        await load(
+            '/assets/models/tiles/mountain/' + tileName + '/' + tileName + '.gltf'
+        ).then( model => {
+            tiles.mountain = { ...tiles.mountain, [tileName]: model };
+            console.log('Loaded: ' + tileName);
+        }).catch( error => {
+            console.log('Could not load model: ' + tileName + ' - ' + error);
+        });
+    }
 };
 
 export { tiles, loadTiles };

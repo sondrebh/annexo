@@ -226,12 +226,19 @@
   "materials": [
     {
       "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7764706,
+          0.921568632,
+          0.309803933,
+          1.0
+        ],
         "baseColorTexture": {
           "index": 0
         },
-        "metallicFactor": 0.0
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
       },
-      "name": "palette1"
+      "name": "defaultMat"
     },
     {
       "pbrMetallicRoughness": {

@@ -5,26 +5,21 @@ import * as THREE from 'three';
 import scene from '../scene/scene';
 
 // Setup
-const ambientLight = new THREE.AmbientLight( 0xFEFEFE, 0.6 );
-scene.add( ambientLight );
+const hemLight = new THREE.HemisphereLight( 0xffffff, 0x8c8c8c, 4);
+scene.add(hemLight);
 
-const light = new THREE.DirectionalLight( 0xFEFEFE, 0.6 );
-
-light.position.set( 15, 100, 15 );
-light.target.position.set( 0, 0, 0 );
+const light = new THREE.SpotLight( 0xffa95c, 4 );
+light.position.y = 100;
+light.shadow.bias = -0.000001;
 
 light.castShadow = true;
 
-light.shadow.mapSize.width = 999999;
-light.shadow.mapSize.height = 999999;
-
-light.shadow.camera.left = -200;
-light.shadow.camera.right = 200;
-light.shadow.camera.top = 200;
-light.shadow.camera.bottom = -200;
+light.shadow.mapSize.width = 1024*100;
+light.shadow.mapSize.height = 1024*100;
 
 
 scene.add( light );
+scene.add( light.target );
 
 const helper = new THREE.CameraHelper( light.shadow.camera );
 scene.add( helper );

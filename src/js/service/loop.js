@@ -3,7 +3,7 @@ import * as THREE from 'three';
 
 // Parts
 import scene from '../parts/scene/scene';
-import renderer from '../parts/renderer/renderer';
+import renderer, { composer } from '../parts/renderer/renderer';
 import camera from '../parts/camera/camera';
 import controls from '../parts/controller/controller';
 import light from '../parts/light/light';
@@ -14,6 +14,7 @@ const loop = () => {
 
     // Perform updates
     controls.update();
+    composer.render();
 
     renderer.render( scene, camera );
 };
