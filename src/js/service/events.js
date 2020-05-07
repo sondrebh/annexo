@@ -1,3 +1,6 @@
+// Libraries
+import * as THREE from 'three';
+
 // Parts
 import renderer from '../parts/renderer/renderer';
 import scene from '../parts/scene/scene';
@@ -52,8 +55,12 @@ renderer.domElement.addEventListener('click', e => {
 
             scene.add(newTile);
 
-            getAdjacentTiles(newTile, 2).forEach(tile => {
-                tile.position.y -= 2;
+            getAdjacentTiles(newTile, 1).forEach(tile => {
+                var outlineMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.FrontSide, transparent: true, opacity: 0.5 } );
+                var outlineMesh = new THREE.Mesh( tile.children[0].geometry.clone(), outlineMaterial );
+                outlineMesh.scale.multiplyScalar( 1.02 );
+                outlineMesh.position.y = tile.position.y + 1.01;
+                tile.add( outlineMesh );
             });
         });
 
