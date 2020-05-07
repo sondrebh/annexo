@@ -18,7 +18,7 @@ const init = () => {
     var axesHelper = new THREE.AxesHelper( 5 );
     //scene.add( axesHelper );
 
-    generate(44, 44, 20, Math.random);
+    generate(30, 30, 15, Math.random);
 };
 
 export default init;

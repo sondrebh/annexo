@@ -7,6 +7,8 @@ import scene from '../../parts/scene/scene';
 import { tiles, loadTiles } from './tiles/tiles';
 import light from '../../parts/light/light';
 
+// Service
+import parseTile from '../utils/parsetile';
 
 // Setup
 const generate = (sizeX, sizeY, scale, seed) => {
@@ -108,27 +110,7 @@ const chooseOne = arr => {
 
 const spawnTiles = tiles => {
     for(const tile of tiles) {
-        tile.traverse( function( node ) {
-
-            if(node.isMesh) { 
-
-                node.castShadow = true;
-
-                if(node.name.includes('Water')) {
-                    node.castShadow = false; 
-                }
-
-                node.receiveShadow = true;
-
-                if(node.name === 'decorator_natural_grasslands') {
-                    node.material.shadowSide = THREE.FrontSide;
-                }
-
-                if(node.material.map) {
-                    node.material.map.anisotropy = 16;
-                }
-            }
-        });
+        parseTile(tile);
 
         scene.add(tile);
     };
