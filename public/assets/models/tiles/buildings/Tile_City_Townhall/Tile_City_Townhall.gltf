@@ -1,0 +1,891 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC3",
+      "max": [
+        0.86602497100830078,
+        0.0,
+        1.0
+      ],
+      "min": [
+        -0.86602497100830078,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        0.866019070148468
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -0.866019070148468
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 36,
+      "type": "VEC2",
+      "max": [
+        0.125,
+        0.625
+      ],
+      "min": [
+        0.125,
+        0.625
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5125,
+      "count": 60,
+      "type": "SCALAR",
+      "max": [
+        35.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 46,
+      "type": "VEC3",
+      "max": [
+        1.687347412109375,
+        0.016582664102315903,
+        3.934051513671875
+      ],
+      "min": [
+        -1.687347412109375,
+        0.016582664102315903,
+        -3.934051513671875
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 46,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 46,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        1.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 46,
+      "type": "VEC2",
+      "max": [
+        0.33400753140449524,
+        0.0653957724571228
+      ],
+      "min": [
+        0.33400735259056091,
+        0.0653957724571228
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5125,
+      "count": 78,
+      "type": "SCALAR",
+      "max": [
+        45.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 763,
+      "type": "VEC3",
+      "max": [
+        4.4476089477539063,
+        6.4539680480957031,
+        3.86090087890625
+      ],
+      "min": [
+        -4.4475936889648438,
+        0.0,
+        -3.8609123229980469
+      ]
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 763,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 763,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.6490170955657959,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 763,
+      "type": "VEC2",
+      "max": [
+        0.35788643360137939,
+        0.44382655620574951
+      ],
+      "min": [
+        0.015789031982421875,
+        0.395938515663147
+      ]
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 763,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 1218,
+      "type": "SCALAR",
+      "max": [
+        762.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 16,
+      "componentType": 5126,
+      "count": 7408,
+      "type": "VEC3",
+      "max": [
+        7.10439395904541,
+        13.025848388671875,
+        7.73272705078125
+      ],
+      "min": [
+        -7.104393482208252,
+        -0.11264988034963608,
+        -7.7327117919921875
+      ]
+    },
+    {
+      "bufferView": 17,
+      "componentType": 5126,
+      "count": 7408,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 18,
+      "componentType": 5126,
+      "count": 7408,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.94272446632385254,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 19,
+      "componentType": 5126,
+      "count": 7408,
+      "type": "VEC2",
+      "max": [
+        0.76708978414535522,
+        0.97468149662017822
+      ],
+      "min": [
+        0.0095655918121337891,
+        0.0036296993494033813
+      ]
+    },
+    {
+      "bufferView": 20,
+      "componentType": 5126,
+      "count": 7408,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 21,
+      "componentType": 5125,
+      "count": 13476,
+      "type": "SCALAR",
+      "max": [
+        7407.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 22,
+      "componentType": 5126,
+      "count": 11630,
+      "type": "VEC3",
+      "max": [
+        11.831847190856934,
+        4.983370304107666,
+        10.576187133789063
+      ],
+      "min": [
+        -11.831847190856934,
+        -0.21862313151359558,
+        -10.576202392578125
+      ]
+    },
+    {
+      "bufferView": 23,
+      "componentType": 5126,
+      "count": 11630,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 24,
+      "componentType": 5126,
+      "count": 11630,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 25,
+      "componentType": 5126,
+      "count": 11630,
+      "type": "VEC2",
+      "max": [
+        0.83007830381393433,
+        0.9850735068321228
+      ],
+      "min": [
+        0.013177871704101563,
+        0.007335662841796875
+      ]
+    },
+    {
+      "bufferView": 26,
+      "componentType": 5126,
+      "count": 11630,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 27,
+      "componentType": 5125,
+      "count": 20730,
+      "type": "SCALAR",
+      "max": [
+        11629.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2019.3.12f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "Tile_City_Townhall.bin",
+      "byteLength": 1413448
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 432,
+      "byteLength": 432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 864,
+      "byteLength": 576
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1440,
+      "byteLength": 288
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1728,
+      "byteLength": 240
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1968,
+      "byteLength": 552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2520,
+      "byteLength": 552
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3072,
+      "byteLength": 736
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3808,
+      "byteLength": 368
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4176,
+      "byteLength": 312
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4488,
+      "byteLength": 9156
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 13644,
+      "byteLength": 9156
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 22800,
+      "byteLength": 12208
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 35008,
+      "byteLength": 6104
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 41112,
+      "byteLength": 12208
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 53320,
+      "byteLength": 4872
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 58192,
+      "byteLength": 88896
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 147088,
+      "byteLength": 88896
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 235984,
+      "byteLength": 118528
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 354512,
+      "byteLength": 59264
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 413776,
+      "byteLength": 118528
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 532304,
+      "byteLength": 53904
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 586208,
+      "byteLength": 139560
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 725768,
+      "byteLength": 139560
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 865328,
+      "byteLength": 186080
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1051408,
+      "byteLength": 93040
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1144448,
+      "byteLength": 186080
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1330528,
+      "byteLength": 82920
+    }
+  ],
+  "images": [
+    {
+      "uri": "palette1.jpg",
+      "name": "palette1"
+    },
+    {
+      "uri": "Medieval_Texture.jpg",
+      "name": "Medieval_Texture"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7764706,
+          0.921568632,
+          0.309803933,
+          1.0
+        ],
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
+      },
+      "name": "defaultMat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "Medieval_Material"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "default"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1
+        }
+      ],
+      "name": "SF_Env_Stonepath_01"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 10,
+            "NORMAL": 11,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13,
+            "COLOR_0": 14
+          },
+          "indices": 15,
+          "material": 1
+        }
+      ],
+      "name": "SF_Bld_HouseAdd_RoofRoom_01"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 16,
+            "NORMAL": 17,
+            "TANGENT": 18,
+            "TEXCOORD_0": 19,
+            "COLOR_0": 20
+          },
+          "indices": 21,
+          "material": 1
+        }
+      ],
+      "name": "SF_Bld_House_Tavern_01"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 22,
+            "NORMAL": 23,
+            "TANGENT": 24,
+            "TEXCOORD_0": 25,
+            "COLOR_0": 26
+          },
+          "indices": 27,
+          "material": 1
+        }
+      ],
+      "name": "SF_Bld_Market_01"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "name": "Tile_City_Townhall"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "name": "default"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        0.04488051,
+        0.0,
+        -0.998992443
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "translation": [
+        -0.561,
+        0.0,
+        -0.062
+      ],
+      "name": "SF_Env_Stonepath_01"
+    },
+    {
+      "mesh": 2,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "translation": [
+        0.385,
+        -0.0279999971,
+        -0.224
+      ],
+      "name": "SF_Bld_HouseAdd_RoofRoom_01"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        -0.466014683,
+        0.0,
+        -0.884777
+      ],
+      "scale": [
+        0.0600000024,
+        0.06,
+        0.0600000024
+      ],
+      "translation": [
+        -0.303,
+        0.0,
+        -0.027
+      ],
+      "name": "SF_Env_Stonepath_01 (1)"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        0.6264507,
+        0.0,
+        -0.779461
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "translation": [
+        -0.284,
+        0.0,
+        -0.332
+      ],
+      "name": "SF_Env_Stonepath_01 (2)"
+    },
+    {
+      "mesh": 3,
+      "rotation": [
+        0.0,
+        -0.382683426,
+        0.0,
+        -0.923879564
+      ],
+      "scale": [
+        0.065,
+        0.065,
+        0.065
+      ],
+      "translation": [
+        0.123,
+        0.009,
+        0.317
+      ],
+      "name": "SF_Bld_House_Tavern_01"
+    },
+    {
+      "mesh": 4,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "scale": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "translation": [
+        -0.143,
+        0.006000042,
+        -0.078
+      ],
+      "name": "SF_Bld_Market_01"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984
+    },
+    {
+      "minFilter": 9729
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "Tile_City_Townhall"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "palette1"
+    },
+    {
+      "sampler": 1,
+      "source": 1,
+      "name": "Medieval_Texture"
+    }
+  ]
+}
