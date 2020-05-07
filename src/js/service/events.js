@@ -6,6 +6,7 @@ import scene from '../parts/scene/scene';
 import pickObject from '../service/utils/pickobject';
 import getScreenPos from '../service/utils/getscreenpos';
 import parseTile from '../service/utils/parsetile';
+import getAdjacentTiles from '../service/utils/getadjacenttiles';
 
 // Models
 import { tiles } from '../service/map/tiles/tiles';
@@ -51,7 +52,9 @@ renderer.domElement.addEventListener('click', e => {
 
             scene.add(newTile);
 
-            console.log(renderer.info.render);
+            getAdjacentTiles(newTile, 2).forEach(tile => {
+                tile.position.y -= 2;
+            });
         });
 
     });
