@@ -3,7 +3,6 @@ import * as SimplexNoise from 'simplex-noise';
 import * as THREE from 'three';
 
 // Parts
-import { mapTiles } from '../../parts/renderer/renderer';
 import scene from '../../parts/scene/scene';
 import { tiles, loadTiles } from './tiles/tiles';
 import light from '../../parts/light/light';
@@ -12,6 +11,8 @@ import light from '../../parts/light/light';
 // Setup
 const generate = (sizeX, sizeY, scale, seed) => {
     const simplex = new SimplexNoise(seed);
+
+    const mapTiles = [];
 
     loadTiles().then(() => {
         for(let i = 0; i < sizeY; i++) {
