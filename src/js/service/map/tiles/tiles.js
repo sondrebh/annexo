@@ -47,7 +47,7 @@ const loadTiles = async () => {
     // Water
     for(const tileName of waterTiles) {
         await load(
-            './assets/models/tiles/water/' + tileName + '/' + tileName + '.gltf'
+            'assets/models/tiles/water/' + tileName + '/' + tileName + '.gltf'
         ).then( model => {
             tiles.water = { ...tiles.water, [tileName]: model };
             console.log('Loaded: ' + tileName);
@@ -59,7 +59,7 @@ const loadTiles = async () => {
     // Grass
     for(const tileName of grassTiles) {
         await load(
-            './assets/models/tiles/grass/' + tileName + '/' + tileName + '.gltf'
+            'assets/models/tiles/grass/' + tileName + '/' + tileName + '.gltf'
         ).then( model => {
             tiles.grass = { ...tiles.grass, [tileName]: model };
             console.log('Loaded: ' + tileName);
@@ -71,7 +71,7 @@ const loadTiles = async () => {
     // Woods
     for(const tileName of woodsTiles) {
         await load(
-            './assets/models/tiles/woods/' + tileName + '/' + tileName + '.gltf'
+            'assets/models/tiles/woods/' + tileName + '/' + tileName + '.gltf'
         ).then( model => {
             tiles.woods = { ...tiles.woods, [tileName]: model };
             console.log('Loaded: ' + tileName);
@@ -83,7 +83,7 @@ const loadTiles = async () => {
     // Mountains
     for(const tileName of mountainTiles) {
         await load(
-            './assets/models/tiles/mountain/' + tileName + '/' + tileName + '.gltf'
+            'assets/models/tiles/mountain/' + tileName + '/' + tileName + '.gltf'
         ).then( model => {
             tiles.mountain = { ...tiles.mountain, [tileName]: model };
             console.log('Loaded: ' + tileName);
@@ -95,7 +95,7 @@ const loadTiles = async () => {
     // Buildings
     for(const tileName of buildingTiles) {
         await load(
-            './assets/models/tiles/buildings/' + tileName + '/' + tileName + '.gltf'
+            'assets/models/tiles/buildings/' + tileName + '/' + tileName + '.gltf'
         ).then( model => {
             tiles.buildings = { ...tiles.buildings, [tileName]: model };
             console.log('Loaded: ' + tileName);
