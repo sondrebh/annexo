@@ -56,11 +56,13 @@ renderer.domElement.addEventListener('click', e => {
             scene.add(newTile);
 
             getAdjacentTiles(newTile, 1).forEach(tile => {
-                var outlineMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.FrontSide, transparent: true, opacity: 0.5 } );
-                var outlineMesh = new THREE.Mesh( tile.children[0].geometry.clone(), outlineMaterial );
-                outlineMesh.scale.multiplyScalar( 1.02 );
-                outlineMesh.position.y = tile.position.y + 1.01;
-                tile.add( outlineMesh );
+                if(tile.position.x !== newTile.position.x) {
+                    var outlineMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.FrontSide, transparent: true, opacity: 0.4 } );
+                    var outlineMesh = new THREE.Mesh( tile.children[0].geometry.clone(), outlineMaterial );
+                    outlineMesh.scale.set(newTile.scale.x - 0.02, newTile.scale.y + 0.02, newTile.scale.z - 0.02);
+                    outlineMesh.position.y = tile.position.y + 1.01;
+                    tile.add( outlineMesh );
+                }
             });
         });
 
