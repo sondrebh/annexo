@@ -16,6 +16,13 @@ const loop = () => {
     composer.render();
     controls.update();
 
+    if(camera.position.y < 60) {
+        light.position.x = camera.position.x + 12;
+        light.position.z = camera.position.z + 12;
+
+        light.target.position.set(light.position.x - 6, 0, camera.position.z - 6);
+    }
+
     renderer.render( scene, camera );
 };
 
