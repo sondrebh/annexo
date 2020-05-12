@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import scene from '../scene/scene';
 
 // Setup
-const hemLight = new THREE.HemisphereLight( 0xffa95c, 0x8c8c8c, 0.9);
+const hemLight = new THREE.HemisphereLight( 0xffffe0, 0x8c8c8c, 0.6);
 scene.add(hemLight);
 
 const light = new THREE.SpotLight( 0xffa95c, 0.9 );

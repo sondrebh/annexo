@@ -9,7 +9,7 @@ import camera from '../camera/camera';
 const controls = new OrbitControls(camera);
 
 controls.enableRotate = false;
-controls.target.set(0,0,-30);
+controls.target.set(10,0,5);
 
 controls.minDistance = 40;
 controls.maxDistance = 60;

@@ -3,6 +3,7 @@ import * as THREE from 'three';
 
 // Parts
 import renderer from '../parts/renderer/renderer';
+import controls from '../parts/controller/controller';
 import camera from '../parts/camera/camera';
 import scene from '../parts/scene/scene';
 import '../parts/light/light';
