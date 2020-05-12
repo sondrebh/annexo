@@ -4,9 +4,7 @@ import light from './light';
 import renderer from '../renderer/renderer';
 
 const lightController = {
-
     distanceOffset: 6,
-    isPanning: false,
 
     init: function () {
         renderer.domElement.addEventListener('mousedown', e => {
@@ -24,10 +22,10 @@ const lightController = {
 
     update: function () {
         //if(this.isPanning) {
-            light.position.x = camera.position.x + camera.position.z + this.distanceOffset * 2;
-            light.position.z = camera.position.x + camera.position.z + this.distanceOffset * 2;
+            light.position.x = camera.position.x + this.distanceOffset * 2;
+            light.position.z = camera.position.z + this.distanceOffset * 2;
 
-            light.target.position.set(camera.position.x + camera.position.z - this.distanceOffset, -1, camera.position.x + camera.position.z - this.distanceOffset);
+            light.target.position.set(camera.position.x - this.distanceOffset, -1, camera.position.z - this.distanceOffset);
         //}
     }
 };
