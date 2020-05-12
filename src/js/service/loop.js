@@ -6,7 +6,7 @@ import scene from '../parts/scene/scene';
 import renderer, { composer } from '../parts/renderer/renderer';
 import camera from '../parts/camera/camera';
 import controls from '../parts/controller/controller';
-import light from '../parts/light/light';
+import lightController from '../parts/light/lightcontroller';
 
 // Setup
 const loop = () => {
@@ -14,14 +14,10 @@ const loop = () => {
 
     // Perform updates
     composer.render();
+
     controls.update();
 
-    if(camera.position.y < 60) {
-        light.position.x = camera.position.x + 12;
-        light.position.z = camera.position.z + 12;
-
-        light.target.position.set(light.position.x - 6, 0, camera.position.z - 6);
-    }
+    lightController.update();
 
     renderer.render( scene, camera );
 };

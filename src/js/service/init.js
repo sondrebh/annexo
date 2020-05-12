@@ -6,6 +6,7 @@ import renderer from '../parts/renderer/renderer';
 import camera from '../parts/camera/camera';
 import scene from '../parts/scene/scene';
 import '../parts/light/light';
+import lightController from '../parts/light/lightcontroller';
 
 // Service
 import generate from '../service/map/generate';
@@ -18,7 +19,9 @@ const init = () => {
     var axesHelper = new THREE.AxesHelper( 5 );
     //scene.add( axesHelper );
 
-    generate(50, 50, 30, Math.random);
+    lightController.init();
+
+    generate(35, 35, 20, Math.random);
 };
 
 export default init;
